@@ -8,16 +8,16 @@ let charset = "abcdefghijklmnopqrstuvwxyz!@#$#&$*0123456789ABCDEFGHIJKLMNOPQRSTU
 export default function App() {
   const [senhaGerada, setSenhaGerada] = useState("")
   const [modalVisible, setModalVisible] = useState(false)
-  
-  function gerarSenha(){
-    
+
+  function gerarSenha() {
+
     let senha = "";
 
-    for (let i = 0, n = charset.length; i < 10; i++){
+    for (let i = 0, n = charset.length; i < 10; i++) {
       senha += charset.charAt(Math.floor(Math.random() * n));
     }
 
-    
+
 
     setSenhaGerada(senha);
     setModalVisible(true);
@@ -25,7 +25,7 @@ export default function App() {
   }
 
 
-  return (    
+  return (
     <View style={styles.container}>
       <Image
         source={require("./src/assets/logo.png")}
@@ -38,10 +38,11 @@ export default function App() {
         <Text style={styles.textButton}> Gerar Senha </Text>
       </TouchableOpacity>
 
+
       <Modal visible={modalVisible} animationType='fade' transparent={true}>
-      <ModalPassword/>
+        <ModalPassword senha={senhaGerada} fecharModal={() => setModalVisible(false)} />
       </Modal>
-      
+
       <Text style={styles.senha}> {senhaGerada} </Text>
     </View>
   );
@@ -69,9 +70,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 8,
-    padding: 6,    
+    padding: 6,
   },
-  textButton:{
+  textButton: {
     color: '#FFF',
     fontSize: 15,
     fontWeight: 'bold',
