@@ -2,19 +2,19 @@ import { useState } from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, Modal } from 'react-native';
 import { ModalPassword } from './src/components/modal/index.js'
 
-
+// Cria variável
 let charset = "abcdefghijklmnopqrstuvwxyz!@#$#&$*0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 export default function App() {
-  const [senhaGerada, setSenhaGerada] = useState("")
-  const [modalVisible, setModalVisible] = useState(false)
+  const [senhaGerada, setSenhaGerada] = useState("") //muda o estado da variável
+  const [modalVisible, setModalVisible] = useState(false) // esta definindo q o estado inicial da variável é zero
 
-  function gerarSenha() {
+  function gerarSenha() { // função
 
-    let senha = "";
+    let senha = ""; //variável vazia
 
-    for (let i = 0, n = charset.length; i < 10; i++) {
-      senha += charset.charAt(Math.floor(Math.random() * n));
+    for (let i = 0, n = charset.length; i < 10; i++) { //length transforma em número 
+      senha += charset.charAt(Math.floor(Math.random() * n)); //vai 'juntar as coisas' //random ->
     }
 
 
