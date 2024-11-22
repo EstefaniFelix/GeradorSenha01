@@ -2,14 +2,16 @@ import { useState } from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, Modal } from 'react-native';
 import { ModalPassword } from './src/components/modal/index.js'
 
-// Cria variável
+import { NavigationContainer } from '@react-navigation/native';
+import{createStackNavigator} from '@'
+
 let charset = "abcdefghijklmnopqrstuvwxyz!@#$#&$*0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 export default function App() {
   const [senhaGerada, setSenhaGerada] = useState("") //muda o estado da variável
   const [modalVisible, setModalVisible] = useState(false) // esta definindo q o estado inicial da variável é zero
 
-  function gerarSenha() { // função
+  function gerarSenha() {
 
     let senha = ""; //variável vazia
 
