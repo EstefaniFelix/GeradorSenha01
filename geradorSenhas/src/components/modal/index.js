@@ -44,10 +44,11 @@ export function ModalPassword({ senha, fecharModal, salvarSenha }) {
 
 const styles = StyleSheet.create({
     container: {
+        backgroundColor: '#E0F7FA', 
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "rgba(24,24,24,0.6)"
+        backgroundColor: "rgba(24,24,24,0.6)"  // Mantive o fundo semi-transparente escuro
     },
     content: {
         backgroundColor: "#FFF",
@@ -61,11 +62,11 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 25,
         fontWeight: "bold",
-        color: "#000",
+        color: "#00796B",  // Cor do título em verde escuro
         paddingBottom: 18
     },
     innerPassword: {
-        backgroundColor: "#e6e6e6",
+        backgroundColor: "#80CBC4",  
         width: "90%",
         padding: 14,
         borderRadius: 8,
@@ -73,6 +74,7 @@ const styles = StyleSheet.create({
     text: {
         textAlign: "center",
         fontWeight: "bold",
+        color: "#00796B",  // Texto em verde escuro
     },
     buttonArea: {
         flexDirection: 'row',
@@ -88,16 +90,15 @@ const styles = StyleSheet.create({
         borderWidth: 0.1,
         borderRadius: 8,
         marginRight: 5,
-        borderColor: "#333",
+        borderColor: "#00BFAE",  
     },
     buttonSave: {
         flex: 1,
         alignItems: "center",
         padding: 8,
-        backgroundColor: "#333",
-        borderRadius: 8
+        backgroundColor: "#00BFAE",  
     },
     buttonTextSave: {
         color: "#FFF"
     }
-})
+});

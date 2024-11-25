@@ -24,7 +24,7 @@ export default function SavedPasswords({ route }) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: '#E0F7FA', 
         padding: 20,
         alignItems: 'center',
         justifyContent: 'center',
@@ -33,9 +33,10 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontWeight: 'bold',
         marginBottom: 20,
+        color: '#00796B', 
     },
     passwordContainer: {
-        backgroundColor: '#e0e0e0',
+        backgroundColor: '#80CBC4', 
         padding: 10,
         marginVertical: 5,
         borderRadius: 5,
@@ -43,6 +44,6 @@ const styles = StyleSheet.create({
     },
     passwordText: {
         fontSize: 16,
-        color: '#000'
+        color: '#fff', 
     },
 });
